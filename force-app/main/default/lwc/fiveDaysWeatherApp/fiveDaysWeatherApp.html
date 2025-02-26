@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Weather App 🌤️" icon-name="utility:world">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter City" value={cityName} onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Get Weather" onclick={fetchWeather} class="slds-m-top_small"></lightning-button>
+        </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={weatherData}>
+            <div class="slds-m-around_medium slds-text-align_center weather-container">
+                <p class="slds-text-heading_medium">{weatherData.name}, {weatherData.sys.country}</p>
+                <p class="slds-text-heading_large">{weatherData.main.temp}°C</p>
+                <p class="slds-text-title">{weatherData.weather.description}</p>
+                <img src={weatherIcon} alt="Weather Icon" class="weather-icon" />
+                <p>Humidity: {weatherData.main.humidity}% | Wind: {weatherData.wind.speed} m/s</p>
+            </div>
+
+            <template if:true={forecastData}>
+                <div class="slds-grid slds-wrap slds-m-around_medium forecast-container">
+                    <template for:each={forecastData} for:item="day">
+                        <div key={day.date} class="slds-col slds-size_1-of-5 forecast-card">
+                            <p>{day.date}</p>
+                            <img src={day.icon} alt="Weather Icon" class="forecast-icon"/>
+                            <p>{day.temp}°C</p>
+                            <p>{day.description}</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error slds-m-around_medium">{error}</p>
+        </template>
+    </lightning-card>
+</template>
