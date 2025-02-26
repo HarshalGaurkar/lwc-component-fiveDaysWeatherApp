@@ -57,26 +57,6 @@ sfdx force:source:push
 
 ---
 
-## 🏗 GitHub Repository Structure  
-```sh
-📦 lwc-component-fiveDaysWeatherApp
- ┣ 📂 force-app
- ┃ ┣ 📂 main
- ┃ ┃ ┣ 📂 default
- ┃ ┃ ┃ ┣ 📂 lwc
- ┃ ┃ ┃ ┃ ┣ 📂 fiveDaysWeatherApp
- ┃ ┃ ┃ ┃ ┃ ┣ 📜 fiveDaysWeatherApp.html
- ┃ ┃ ┃ ┃ ┃ ┣ 📜 fiveDaysWeatherApp.js
- ┃ ┃ ┃ ┃ ┃ ┣ 📜 fiveDaysWeatherApp.js-meta.xml
- ┃ ┃ ┃ ┃ ┃ ┗ 📜 fiveDaysWeatherApp.css
- ┃ ┃ ┃ ┗ 📂 classes (if Apex is used)
- ┣ 📜 .gitignore
- ┣ 📜 README.md
- ┗ 📜 sfdx-project.json
-```
-
----
-
 ## 🛠️ Technologies Used  
 - **Lightning Web Components (LWC)**  
 - **Salesforce Apex (if backend integration is required)**  
