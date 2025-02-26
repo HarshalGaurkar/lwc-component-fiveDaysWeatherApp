@@ -63,15 +63,6 @@ sfdx force:source:push
 
 ---
 
-## 🤝 Contributing  
-We welcome contributions! To contribute:  
-1️⃣ Fork the repository  
-2️⃣ Create a new **feature branch** (`git checkout -b feature-branch`)  
-3️⃣ Commit and push changes (`git push origin feature-branch`)  
-4️⃣ Open a **Pull Request (PR)** for review  
-
----
-
 ## 📜 License  
 This project is **open-source** and licensed under the **MIT License**.  
 
