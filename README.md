@@ -1,5 +1,3 @@
-### **📄 README.md**
-
 # 🌦️ Five Days Weather App - LWC Component
 
 A **Lightning Web Component (LWC)** designed for Salesforce to fetch and display a **five-day weather forecast** using an external API. This component offers an intuitive UI and seamless integration within a Salesforce Lightning Page.
